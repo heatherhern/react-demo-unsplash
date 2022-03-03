@@ -16,14 +16,18 @@ function App() {
     }
     sendGetRequest();
 
-      return ("");
+      return (
+        <div>hello world</div>
+      );
+
+
         // <div>
         // <h1>my react app</h1>
         //   const photosArray = {unsplashArray.map((item) => (
         //   <img src={photosArray.data.url}
     // };
-  };
-}
+};
+// }
 
 
 export default App;
