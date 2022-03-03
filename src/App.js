@@ -7,19 +7,21 @@ function App() {
   
   const sendGetRequest = async () => {
     try {
-      const response = await axios.get(url);
-      setUnsplashArray(response.data);
-      console.log(response);
-      console.log(unsplashArray);
+      const res = await axios.get(url);
+      setUnsplashArray(res.data);
+      console.log(res.data);
+      // console.log(unsplashArray);
     } catch (err) {
       console.error(err);
     }
     sendGetRequest();
-    return ("");
-    // <div>
-    // <h1>my react app</h1>
-    //   const photosArray = {unsplashArray.map((item) => (
-    //   <img src={photosArray.data.url}
+
+      return ("");
+        // <div>
+        // <h1>my react app</h1>
+        //   const photosArray = {unsplashArray.map((item) => (
+        //   <img src={photosArray.data.url}
+    // };
   };
 }
 
