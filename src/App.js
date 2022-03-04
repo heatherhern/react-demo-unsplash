@@ -1,10 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
-function App() {
-  const url = "https://api.unsplash.com/photos/?client_id=EFPVpScTkPLXh1g-f7SXLo62iM5XrmDH6jCGfeqHdDs"
-  const [unsplashArray, setUnsplashArray] = useState([]);
-  
+useEffect(() => {
   const sendGetRequest = async () => {
     try {
       const res = await axios.get(url);
@@ -14,13 +11,21 @@ function App() {
     } catch (err) {
       console.error(err);
     }
+  };
+});
+
+function App() {
+  const url = "https://api.unsplash.com/photos/?client_id=EFPVpScTkPLXh1g-f7SXLo62iM5XrmDH6jCGfeqHdDs"
+  const [unsplashArray, setUnsplashArray] = useState([]);
+  
+  
+    
     sendGetRequest();
+    useEffect(()
 
       return (
         <div>hello world</div>
       );
-
-
         // <div>
         // <h1>my react app</h1>
         //   const photosArray = {unsplashArray.map((item) => (
@@ -28,6 +33,8 @@ function App() {
     // };
 };
 // }
+
+
 
 
 export default App;
